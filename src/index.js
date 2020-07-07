@@ -2,10 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
 import * as serviceWorker from './serviceWorker';
+import { ApolloProvider } from 'react-apollo';
+import { client } from './graphql/apollo.config'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider
+      
+      client={client}>
+      <App />
+      </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

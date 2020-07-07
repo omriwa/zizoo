@@ -1,11 +1,14 @@
-import React from 'react';
+import React,{memo} from 'react';
 import { GridList } from '@material-ui/core';
 
-export const Gallery = ({ children,cellHeight,cols }) => <GridList
-    cellHeight={cellHeight}
-    cols={cols}
->
+export const Gallery = memo(({ children, cellHeight, cols }) => {
+    console.log(children.length)
+    return <GridList
+        cellHeight={cellHeight}
+        cols={cols}
+    >
     {
         children
     }
 </GridList>
+})

@@ -27,6 +27,7 @@ export const Card = ({ text, imageUrl }) => <CardMedia
         <img
             src={imageUrl}
             className='card-img'
+            alt={text.id}
         />
     </div>
     
